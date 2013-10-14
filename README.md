@@ -1,0 +1,4 @@
+Spook
+=====
+
+Ghost theme
