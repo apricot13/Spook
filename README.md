@@ -1,4 +1,4 @@
-nter><a href="http://www.femgeek.co.uk"><img src="https://raw.github.com/apricot13/spook/master/assets/img/screenshot.png" alt="Spook" /></a></center>
+<center><a href="http://www.femgeek.co.uk"><img src="https://raw.github.com/apricot13/spook/master/assets/img/screenshot.png" alt="Spook" /></a></center>
 
 
 # Credits
