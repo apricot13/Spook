@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Alef' rel='stylesheet' type='text/css'>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}" >
+
+    {{! The big featured header on the homepage, with the site logo and description }}
+    <header>
+        <div class="container">
+        <div class="row" id="header-nav">
+            <div class="col-md-5 text-center">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="http://www.femgeek.co.uk">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"  class="img-circle img-responsive" /></a>{{/if}}
+            </div>
+            <div class="col-md-5 text-center">
+                <ul class="list-inline">
+                    <li><a href="https://twitter.com/apricot_13">Twitter</a></li>
+                    <li><a href="https://github.com/apricot13">Github</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 text-center" id="header-meta">
+                    <p><span class="blog-title">{{@blog.title}}</span> - <span class="blog-description">{{@blog.description}}</span></p>
+        </div>
+        </div>
+        </div>
+    </header>
+
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="site-footer">
+    <div class="container"><div class="row"><div class="col-md-12">
+        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a>, Theme by <a class="icon-ghost" href="http://www.femgeek.co.uk">femgeek</a>.</section>
+             <section class="poweredby"></section>
+        </div>
+    </div></div></div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>
